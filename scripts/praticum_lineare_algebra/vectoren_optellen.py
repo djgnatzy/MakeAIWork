@@ -3,8 +3,6 @@
 # Gebruik twee lijsten [] - want onveranderlijk
 # Tel van beiden index [0] bij elkaar op, zo ook voor indices [1] en [2] etc.
 
-# Tel
-
 a = [0, 3, 4]
 b = [1, 4, 7]
 
