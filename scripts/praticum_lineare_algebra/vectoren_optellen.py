@@ -1,6 +1,6 @@
 #!/user/bin/#!/usr/bin/env python3
 
-# Gebruik twee lijsten [] - want onveranderlijker
+# Gebruik twee lijsten [] - want onveranderlijk
 # Tel van beiden index [0] bij elkaar op, zo ook voor indices [1] en [2] etc.
 
 # Tel
