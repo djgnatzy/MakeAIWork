@@ -26,7 +26,7 @@ print("Vector b = ", b)
 
 # Variabele die de nieuw berekende vector gaat weergeven 'sum'
 #
-# Indeces in lijst a doorlopen en bij identieke indeces in lijst b optellen
+# Indeces in lijst a doorlopen en bij corresponderende indeces in lijst b optellen
 # Beperk het aantal keer dat de lijst doorlopen wordt door de length van
 # lijst a te gebruiken
 #
