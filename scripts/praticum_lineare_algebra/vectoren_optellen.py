@@ -24,10 +24,13 @@ print("Vector b = ", b)
 
 # Twee onveranderlijke lijsten []
 
-# Variabele die de berekende vector gaat weergeven 'sum'
+# Variabele die de nieuw berekende vector gaat weergeven 'sum'
 #
-# Index in lijst a doorlopen en bij identieke index in lijst b optellen
+# Indeces in lijst a doorlopen en bij identieke indeces in lijst b optellen
+# Beperk het aantal keer dat de lijst doorlopen wordt door de length van
+# lijst a te gebruiken
 #
+# Druk het resultaat af
 
 
 sum = []
