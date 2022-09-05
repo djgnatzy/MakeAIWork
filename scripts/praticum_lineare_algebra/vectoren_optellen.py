@@ -38,4 +38,4 @@ for i in range(len(a)):
     sum.append(a[i] + b[i])
 
 print("Vector Addition = ", sum)
-# This is how we can print a vector in python
+
