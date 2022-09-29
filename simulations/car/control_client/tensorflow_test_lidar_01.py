@@ -18,7 +18,7 @@ lidar_01_train = pd.read_csv(filename, header = 0, sep = ',')
 lidar_01_sensors = lidar_01_train.copy()
 lidar_01__labels = lidar_01_sensors.pop('Steering Angle')
 
-# print(lidar_01__labels)
+
 
 lidar_01_sensors = np.array(lidar_01_sensors)
 
@@ -27,14 +27,23 @@ lidar_01_sensors = np.array(lidar_01_sensors)
 normalize = keras.layers.Normalization()
 normalize.adapt(lidar_01_sensors)
 
+# Kijken of het mogelijk is om het startpunt vast te zetten, nu variabel.
+
 norm_lidar_01_model = tf.keras.Sequential([
   normalize,
-  keras.layers.Dense(64, activation = 'relu'),
-  keras.layers.Dense(32, activation = 'relu'),
-  keras.layers.Dense(1)
+  keras.layers.Dense(64, activation = 'elu'),
+  keras.layers.Dense(64, activation = 'elu'),
+  keras.layers.Dense(64)
 ])
 
-norm_lidar_01_model.compile(loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True), metrics=['accuracy'],
-                            optimizer = tf.keras.optimizers.Adam(learning_rate=0.0001))
+norm_lidar_01_model.compile(loss = tf.keras.losses.MeanSquaredError(),
+                            optimizer = tf.keras.optimizers.Adam(learning_rate=0.00001)) 
 
-norm_lidar_01_model.fit(lidar_01_sensors, lidar_01__labels, epochs = 50)
+history = norm_lidar_01_model.fit(lidar_01_sensors, lidar_01__labels, epochs = 200)
+
+# norm_lidar_01_model.summary()
+
+# # history.history
+
+# print("Evaluate")
+# result = norm_lidar_01_model.evaluate(norm_lidar_01_model)

@@ -29,11 +29,13 @@ normalize.adapt(sonar_01_sensors)
 
 norm_sonar_01_model = tf.keras.Sequential([
   normalize,
+  keras.layers.Dense(64, activation = 'relu'),
+  keras.layers.Dense(64, activation = 'relu'),
   keras.layers.Dense(64),
   keras.layers.Dense(1)
 ])
 
 norm_sonar_01_model.compile(loss = tf.keras.losses.MeanSquaredError(),
-                            optimizer = tf.keras.optimizers.Adam(learning_rate = 0.00001))
+                            optimizer = tf.keras.optimizers.Adam(learning_rate = 0.0001))
 
-norm_sonar_01_model.fit(sonar_01_sensors, sonar_01__labels, epochs = 500)
+norm_sonar_01_model.fit(sonar_01_sensors, sonar_01__labels, epochs = 1000)
