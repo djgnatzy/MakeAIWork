@@ -1,0 +1,17 @@
+jupyterlab
+matplotlib
+matplotlib-venn
+numpy
+Pillow
+ptpython
+scipy
+SimPyLC==3.10.0
+sonar
+numexpr
+pandas
+keras
+Keras-Preprocessing
+scikit-image
+scikit-learn
+ptpython
+    

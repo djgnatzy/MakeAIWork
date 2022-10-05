@@ -15,7 +15,7 @@ etc/
 share/
 .DS_Store
 env/
-simulations/
+# simulations/
 simpylc/
 accessories/
 env/Scripts
